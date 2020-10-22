@@ -1,3 +1,4 @@
+// https://jestjs.io/docs/en/mock-functions#mock-property
 const myMock = jest.fn(() => "return value")
 
 const a = new myMock("first arg", "second arg")
@@ -5,10 +6,9 @@ const b = {}
 const bound = myMock.bind(b)
 bound();
 
-console.log("instances", myMock.mock.instances)
-console.log("calls", myMock.mock.calls)
+// console.log("instances", myMock.mock.instances)
+// console.log("calls", myMock.mock.calls)
 
-// https://jestjs.io/docs/en/mock-functions#mock-property
 describe("Mock instances", () => {
   it("The function was called exactly twice", () => {
     expect(myMock.mock.calls.length).toBe(2)
@@ -26,10 +26,10 @@ describe("Mock instances", () => {
     expect(myMock.mock.instances.length).toBe(2);
   })
   // this acutally doesn't work
-  xit("The function was called exactly once", () => {
+  xit("The function name is ....", () => {
     console.log(myMock.mock.instances[0].name)
     // The object returned by the first instantiation of this function
     // had a `name` property whose value was set to 'test'
-    expect(myMock.mock.instances[0].name).toEqual('undefined');
+    expect(myMock.mock.instances[0].name).toEqual('test');
   })
 })
