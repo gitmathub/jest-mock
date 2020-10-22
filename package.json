@@ -1,0 +1,22 @@
+{
+  "name": "jest-mock",
+  "version": "1.0.0",
+  "description": "Examples how to use Mocking with Jest",
+  "main": "photos.js",
+  "dependencies": {
+    "axios": "^0.20.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "*",
+    "babel-jest": "*",
+    "jest": "latest"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "mat",
+  "license": "MIT"
+}
